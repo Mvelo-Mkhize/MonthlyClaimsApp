@@ -1,0 +1,48 @@
+﻿<Window x:Class="MonthlyClaimsApp.Lecturer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MonthlyClaimsApp"
+        mc:Ignorable="d"
+        Title="Lecturer" Height="450" Width="800">
+    <Grid>
+        <TextBlock Text="Lecturers" FontSize="30"/>
+        <DataGrid AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="0,50,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="*"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
+                <DataGridTextColumn Header="Surname" Binding="{Binding Surname}" Width="*"/>
+                <DataGridTextColumn Header="Department" Binding="{Binding Department}" Width="*"/>
+                <DataGridTextColumn Header="Course" Binding="{Binding Course}" Width="*"/>
+                <DataGridTextColumn Header="Module" Binding="{Binding Module}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Content="Submit" VerticalAlignment="Bottom" HorizontalAlignment="Center" 
+        Width="250" Height="50" Background="AntiqueWhite"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+
+                <Menu  HorizontalAlignment="Right" Background="AntiqueWhite">
+                    <MenuItem Header="Navigation" FontSize="18" Background="AntiqueWhite">
+                        <MenuItem Header="Return to Main Window" Click="MainWindow2"/>
+                        <MenuItem Header="Exit" Click="Exit2"/>
+                    </MenuItem>
+                </Menu>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
